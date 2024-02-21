@@ -1,0 +1,75 @@
+2024/02/21 18:34:02 [INFO] Packer version: 1.8.6 [go1.20.14 freebsd amd64]
+2024/02/21 18:34:02 [TRACE] discovering plugins in /usr/local/bin
+2024/02/21 18:34:02 [TRACE] discovering plugins in /root/.config/packer/plugins
+2024/02/21 18:34:02 [DEBUG] Discovered plugin: qemu = /root/.config/packer/plugins/github.com/hashicorp/qemu/packer-plugin-qemu_v1.0.10_x5.0_freebsd_amd64
+2024/02/21 18:34:02 [DEBUG] Discovered plugin: vmware = /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64
+2024/02/21 18:34:02 [DEBUG] Discovered plugin: vsphere = /root/.config/packer/plugins/github.com/hashicorp/vsphere/packer-plugin-vsphere_v1.2.4_x5.0_freebsd_amd64
+2024/02/21 18:34:03 [INFO] found external [iso vmx] builders from vmware plugin
+2024/02/21 18:34:04 [INFO] found external [clone iso supervisor] builders from vsphere plugin
+2024/02/21 18:34:04 [INFO] found external [-packer-default-plugin-name- template] post-processors from vsphere plugin
+2024/02/21 18:34:04 [INFO] found external [-packer-default-plugin-name-] builders from qemu plugin
+2024/02/21 18:34:04 [TRACE] discovering plugins in .
+2024/02/21 18:34:04 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2024/02/21 18:34:04 [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2024/02/21 18:34:04 [WARN] Config file doesn't exist: /root/.packerconfig
+2024/02/21 18:34:04 [INFO] Setting cache directory: /root/.cache/packer
+2024/02/21 18:34:04 [TRACE] Starting external plugin /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 start builder iso
+2024/02/21 18:34:04 Starting plugin: /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 []string{"/root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64", "start", "builder", "iso"}
+2024/02/21 18:34:04 Waiting for RPC address for: /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64
+2024/02/21 18:34:04 Received unix RPC address for /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64: addr is /tmp/packer-plugin2185453228
+2024/02/21 18:34:04 packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 plugin: 2024/02/21 18:34:04 Plugin address: unix /tmp/packer-plugin2185453228
+2024/02/21 18:34:04 packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 plugin: 2024/02/21 18:34:04 Waiting for connection...
+2024/02/21 18:34:04 packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 plugin: 2024/02/21 18:34:04 Serving a plugin connection...
+2024/02/21 18:34:04 packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 plugin: 2024/02/21 18:34:04 [TRACE] starting builder iso
+2024/02/21 18:34:04 [TRACE] Starting external plugin /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 start builder iso
+2024/02/21 18:34:04 Starting plugin: /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 []string{"/root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64", "start", "builder", "iso"}
+2024/02/21 18:34:04 Waiting for RPC address for: /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64
+2024/02/21 18:34:04 packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 plugin: 2024/02/21 18:34:04 Plugin address: unix /tmp/packer-plugin2633568610
+2024/02/21 18:34:04 Received unix RPC address for /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64: addr is /tmp/packer-plugin2633568610
+2024/02/21 18:34:04 packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 plugin: 2024/02/21 18:34:04 Waiting for connection...
+2024/02/21 18:34:04 packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 plugin: 2024/02/21 18:34:04 Serving a plugin connection...
+2024/02/21 18:34:04 packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64 plugin: 2024/02/21 18:34:04 [TRACE] starting builder iso
+2024/02/21 18:34:05 [TRACE] Starting internal plugin packer-provisioner-shell
+2024/02/21 18:34:05 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-provisioner-shell"}
+2024/02/21 18:34:05 Waiting for RPC address for: /usr/local/bin/packer
+2024/02/21 18:34:05 packer-provisioner-shell plugin: [INFO] Packer version: 1.8.6 [go1.20.14 freebsd amd64]
+2024/02/21 18:34:05 packer-provisioner-shell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2024/02/21 18:34:05 packer-provisioner-shell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /root/.packerconfig
+2024/02/21 18:34:05 packer-provisioner-shell plugin: [WARN] Config file doesn't exist: /root/.packerconfig
+2024/02/21 18:34:05 packer-provisioner-shell plugin: [INFO] Setting cache directory: /root/.cache/packer
+2024/02/21 18:34:05 packer-provisioner-shell plugin: args: []string{"packer-provisioner-shell"}
+2024/02/21 18:34:05 packer-provisioner-shell plugin: Plugin address: unix /tmp/packer-plugin2512921553
+2024/02/21 18:34:05 packer-provisioner-shell plugin: Waiting for connection...
+2024/02/21 18:34:05 Received unix RPC address for /usr/local/bin/packer: addr is /tmp/packer-plugin2512921553
+2024/02/21 18:34:05 packer-provisioner-shell plugin: Serving a plugin connection...
+2024/02/21 18:34:05 ui: [1;32mvmware-iso.alpine: output will be in this color.[0m
+2024/02/21 18:34:05 ui: [1;36mvmware-iso.alpine: output will be in this color.[0m
+2024/02/21 18:34:05 ui: 
+2024/02/21 18:34:05 Build debug mode: false
+2024/02/21 18:34:05 Force build: false
+2024/02/21 18:34:05 On error: 
+2024/02/21 18:34:05 Waiting on builds to complete...
+2024/02/21 18:34:05 Starting build run: vmware-iso.alpine
+2024/02/21 18:34:05 Starting build run: vmware-iso.alpine
+2024/02/21 18:34:05 Running builder: 
+2024/02/21 18:34:05 [INFO] (telemetry) Starting builder vmware-iso.alpine
+2024/02/21 18:34:05 Running builder: 
+2024/02/21 18:34:05 [INFO] (telemetry) Starting builder vmware-iso.alpine
+2024/02/21 18:34:05 [INFO] (telemetry) ending vmware-iso.alpine
+2024/02/21 18:34:05 [INFO] (telemetry) ending vmware-iso.alpine
+2024/02/21 18:34:05 ui error: [1;31mBuild 'vmware-iso.alpine' errored after 2 milliseconds 779 microseconds: Failed creating VMware driver: can't find driver for OS: freebsd[0m
+2024/02/21 18:34:05 ui error: [1;31mBuild 'vmware-iso.alpine' errored after 2 milliseconds 859 microseconds: Failed creating VMware driver: can't find driver for OS: freebsd[0m
+2024/02/21 18:34:05 ui: 
+==> Wait completed after 3 milliseconds 64 microseconds
+2024/02/21 18:34:05 machine readable: error-count []string{"1"}
+2024/02/21 18:34:05 ui error: 
+==> Some builds didn't complete successfully and had errors:
+2024/02/21 18:34:05 machine readable: vmware-iso.alpine,error []string{"Failed creating VMware driver: can't find driver for OS: freebsd"}
+2024/02/21 18:34:05 ui error: --> vmware-iso.alpine: Failed creating VMware driver: can't find driver for OS: freebsd
+2024/02/21 18:34:05 ui: 
+==> Builds finished but no artifacts were created.
+2024/02/21 18:34:05 [INFO] (telemetry) Finalizing.
+2024/02/21 18:34:05 waiting for all plugin processes to complete...
+2024/02/21 18:34:05 /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64: plugin process exited
+2024/02/21 18:34:05 /root/.config/packer/plugins/github.com/hashicorp/vmware/packer-plugin-vmware_v1.0.11_x5.0_freebsd_amd64: plugin process exited
+2024/02/21 18:34:05 /usr/local/bin/packer: plugin process exited
