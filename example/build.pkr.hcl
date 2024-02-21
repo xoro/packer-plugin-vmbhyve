@@ -12,5 +12,5 @@ packer {
 }
 
 build {
-  sources = ["source.vmware-iso.debian"]
+  sources = ["source.vmware-iso.alpine"]
 }

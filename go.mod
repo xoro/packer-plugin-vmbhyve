@@ -1,4 +1,4 @@
-module github.com/hashicorp/packer-plugin-vmware
+module github.com/xoro/packer-plugin-vmbhyve
 
 go 1.19
 

@@ -6,7 +6,7 @@ locals {
   memory         = var.memory == null ? 2048 : var.memory
 }
 
-source "vmware-iso" "debian" {
+source "vmware-iso" "alpine" {
   boot_command       = var.boot_command
   boot_wait          = "10s"
   cpus               = 2
@@ -14,17 +14,17 @@ source "vmware-iso" "debian" {
   disk_adapter_type  = var.disk_adapter_type
   guest_os_type      = var.guest_os_type
   headless           = var.vm_headless
-  http_content = { # Use http_content template to dynamic configure preseed - https://www.hashicorp.com/blog/using-template-files-with-hashicorp-packer
-    "/preseed.cfg" = templatefile("${abspath(path.root)}/${local.data_directory}/preseed.pkrtpl.hcl", {
-      build_username       = var.build_username
-      build_password       = var.build_password
-      vm_guest_os_language = var.vm_guest_os_language
-      vm_guest_os_keyboard = var.vm_guest_os_keyboard
-      vm_guest_os_timezone = var.vm_guest_os_timezone
-    })
-  }
-  iso_checksum         = var.iso_checksum
-  iso_url              = var.iso_url
+  #http_content = { # Use http_content template to dynamic configure preseed - https://www.hashicorp.com/blog/using-template-files-with-hashicorp-packer
+  #  "/preseed.cfg" = templatefile("${abspath(path.root)}/${local.data_directory}/preseed.pkrtpl.hcl", {
+  #    build_username       = var.build_username
+  #    build_password       = var.build_password
+  #    vm_guest_os_language = var.vm_guest_os_language
+  #    vm_guest_os_keyboard = var.vm_guest_os_keyboard
+  #    vm_guest_os_timezone = var.vm_guest_os_timezone
+  #  })
+  #}
+  iso_url              = "https://dl-cdn.alpinelinux.org/alpine/v3.19/releases/x86_64/alpine-standard-3.19.1-x86_64.iso"
+  iso_checksum         = "file:https://dl-cdn.alpinelinux.org/alpine/v3.19/releases/x86_64/alpine-standard-3.19.1-x86_64.iso.sha256"
   memory               = local.memory
   network_adapter_type = var.network_adapter_type
   output_directory     = "builds/${var.vm_name}"

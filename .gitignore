@@ -1,7 +1,8 @@
 main
 dist/*
-packer-plugin-vmware
+packer-plugin-vmbhyve
 example/builds/*/
+example/log/packer.log
 .DS_Store
 .docs
 crash.log
