@@ -1,4 +1,4 @@
-NAME=vmbhyve
+NAME=vmware
 BINARY=packer-plugin-${NAME}
 
 COUNT?=1

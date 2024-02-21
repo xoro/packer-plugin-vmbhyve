@@ -9,15 +9,15 @@ import (
 
 	"github.com/hashicorp/packer-plugin-sdk/plugin"
 
-	"github.com/xoro/packer-plugin-vmbhyve/builder/vmbhyve/iso"
-//	"github.com/hashicorp/packer-plugin-vmware/builder/vmware/vmx"
-	"github.com/xoro/packer-plugin-vmbhyve/version"
+	"github.com/hashicorp/packer-plugin-vmware/builder/vmware/iso"
+	"github.com/hashicorp/packer-plugin-vmware/builder/vmware/vmx"
+	"github.com/hashicorp/packer-plugin-vmware/version"
 )
 
 func main() {
 	pps := plugin.NewSet()
 	pps.RegisterBuilder("iso", new(iso.Builder))
-//	pps.RegisterBuilder("vmx", new(vmx.Builder))
+	pps.RegisterBuilder("vmx", new(vmx.Builder))
 	pps.SetVersion(version.PluginVersion)
 	err := pps.Run()
 	if err != nil {
